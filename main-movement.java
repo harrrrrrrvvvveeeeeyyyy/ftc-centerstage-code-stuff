@@ -2,7 +2,7 @@ package org.firstinspires.ftc.teamcode;
 //package org.firstinspires.ftc.ftccommon.internal;
 //package org.firstinspires.ftc.ftccommon.external;
 
-import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
+import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode; //theoretically these are imported packages we need to use
 import com.qualcomm.robotcore.hardware.CRServo;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.util.RobotLog;
@@ -19,7 +19,7 @@ public class MainMovement extends LinearOpMode {
    * This function is executed when this Op Mode is selected from the Driver Station.
    */
   DcMotor FR;
-  DcMotor BR;
+  DcMotor BR; 
   DcMotor BL;
   DcMotor FL;
   DcMotor ARM;
