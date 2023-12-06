@@ -18,12 +18,12 @@ public class MainMovement extends LinearOpMode {
   /**
    * This function is executed when this Op Mode is selected from the Driver Station.
    */
-  DcMotor FR;
-  DcMotor BR; 
-  DcMotor BL;
-  DcMotor FL;
-  DcMotor ARM;
-  CRServo claw;
+  DcMotor FR; //front motor
+  DcMotor BR; //back motor
+  DcMotor BL; // back left
+  DcMotor FL; // front left
+  DcMotor ARM; // arm motor
+  CRServo claw; // claw machinery
   double LSY;
   double LSX;
   double RSX;
@@ -105,6 +105,7 @@ public class MainMovement extends LinearOpMode {
           BL.setPower(0.5);
           BR.setPower(0.5);
         }*/
+        
         telemetry.addData("LSY ", LSY);
         telemetry.addData("LSX ", LSX);
         telemetry.addData("RSY ", RSY);
