@@ -26,7 +26,8 @@ public class MainMovement extends LinearOpMode {
   DcMotor DRONE;
   DcMotor LARM;
   DcMotor RARM;
-  CRServo claw;
+  CRServo LCLAW;
+  CRServo RCLAW;
   double LSY;
   double LSX;
   double RSX;
@@ -48,7 +49,9 @@ public class MainMovement extends LinearOpMode {
     LARM = hardwareMap.dcMotor.get("LARM");
     RARM = hardwareMap.dcMotor.get("RARM");
     //DRONE = hardwareMap.dcMotor.get("drone"); // added, not sure how it works
-    claw = hardwareMap.crservo.get("claw");
+    LCLAW = hardwareMap.crservo.get("lclaw");
+    RCLAW = hardwareMap.crservo.get("rclaw");
+
     FL.setDirection(DcMotor.Direction.REVERSE);
     BL.setDirection(DcMotor.Direction.REVERSE);
     waitForStart();
@@ -105,11 +108,14 @@ public class MainMovement extends LinearOpMode {
 
 
         if(gamepad1.right_bumper){                   //claw close move
-          claw.setPower(.3);
+          LCLAW.setPower(.3);
+          RCLAW.setPower(.3);
         } else if(gamepad1.left_bumper){
-          claw.setPower(-.3);                        //claw open move
+          LCLAW.setPower(-.3);                        //claw open move
+          RCLAW.setPower(-.3);
         //} else {
-          //claw.setPower(0);
+          //LCLAW.setPower(0);
+          //RCLAW.setPower(0);
         }
 
         /* 
