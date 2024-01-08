@@ -23,11 +23,12 @@ public class MainMovement extends LinearOpMode {
   DcMotor BL;
   DcMotor FL;
   DcMotor INTAKE;
-  DcMotor DRONE;
+  //DcMotor DRONE;
   DcMotor LARM;
   DcMotor RARM;
   CRServo LCLAW;
   CRServo RCLAW;
+  //DcMotor LIFT;
   double LSY;
   double LSX;
   double RSX;
@@ -51,6 +52,7 @@ public class MainMovement extends LinearOpMode {
     //DRONE = hardwareMap.dcMotor.get("drone"); // added, not sure how it works
     LCLAW = hardwareMap.crservo.get("lclaw");
     RCLAW = hardwareMap.crservo.get("rclaw");
+    //LIFT = hardwareMap.dcMotor.get("lift");
 
     FL.setDirection(DcMotor.Direction.REVERSE);
     BL.setDirection(DcMotor.Direction.REVERSE);
@@ -132,6 +134,13 @@ public class MainMovement extends LinearOpMode {
           INTAKE.setPower(0);
         }
 
+        /* 
+        if(gamepad1.b){                              // lifting the robot up
+          LIFT.setPower(.5);
+        } else {
+          LIFT.setPower(0);
+        }
+        */
 
       /*
         if (gamepad1.a) {
